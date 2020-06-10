@@ -1,0 +1,115 @@
+.ybanner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ynone {
+    display: none;
+}
+
+.yactive {
+    display: inline;
+}
+
+.ybanner img {
+    width: 100%;
+    height: 650px;
+}
+
+.yrow {
+    position: relative;
+    width: 100%;
+    height: 650px;
+}
+
+.ybanner-button {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    opacity: 0.1;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.ybanner-button:hover {
+    opacity: 0.5;
+}
+
+
+.ybanner-button-l {
+    left: 0;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5)100%);
+}
+
+.ybanner-button-r {
+    right: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5)100%);
+}
+
+.ybanner-button span {
+    color: white;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+
+    font-size: 300%;
+}
+
+.yradio-grp {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+}
+
+.yradio {
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+}
+
+.yradio::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 1px solid #7d7d7d;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.yradio:checked::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 1px solid #c59c5a;
+    background: #c59c5a;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.yradio:checked:after {
+    content: '';
+    width: 10px;
+    height: 5px;
+    border: 2px solid white;
+    border-top: transparent;
+    border-right: transparent;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    vertical-align: middle;
+    transform: rotate(-45deg);
+}
+
+.yradio:focus {
+    outline: 0;
+}

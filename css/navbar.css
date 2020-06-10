@@ -1,0 +1,60 @@
+.ynavbar {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    
+    width: 100%;
+
+    overflow: hidden;
+    background: rgba(245, 245, 245, 1);
+}
+
+#ynavbar-l {
+    width: 20%;
+    height: 60px;
+    float: left;
+}
+
+#ynavbar-l a {
+    float: right;
+    padding-right: 10px;
+}
+
+#ynavbar-l img {
+    height: 30px;
+    margin-top: 15px;
+}
+
+#ynavbar-r {
+    width: 80%;
+    height: 60px;
+    padding-left: 20%;
+    margin: 0;
+    list-style: none;
+}
+
+#ynavbar-r li {
+    float: left;
+    width: 17.5%;
+}
+
+#ynavbar-r a:hover {
+    background: rgba(0, 118, 63, 0.5);
+    color: white;
+}
+
+#ynavbar-r img {
+    margin: 20px;
+    height: 40px;
+}
+
+#ynavbar-r a {
+    height: 60px;
+    line-height: 60px;
+    display: block;
+
+    font-size: 15px;
+    color: rgb(0, 117, 62);
+    text-decoration: none;
+    text-align: center;
+}

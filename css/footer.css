@@ -1,0 +1,52 @@
+.yfooter {
+    padding-top: 10px;
+    width: 100%;
+    height: auto;
+    background: white;
+    margin-top: 2px;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.yfooter ul {
+    width: 70%;
+    height: 25px;
+    /* padding: 10px 15% 0 15%; */
+    padding: 0 15%;
+    list-style: none;
+    font-size: 14px;
+}
+
+.yfooter li {
+    width: 20%;
+    /* display: inline-block; */
+    float: left;
+}
+
+.yfooter a:visited {
+    color: black;
+}
+
+.yfooter p {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.yfooter span {
+    width: 0.5em;
+    height: 1em;
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .yhidden-xs {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .yhidden-lg {
+        display: none !important;
+    }
+}

@@ -1,0 +1,158 @@
+@media(min-width:1200px) {
+
+    .ycontainer,
+    .ycontent {
+        width: 80%;
+    }
+}
+
+@media (max-width:767px) {
+
+    .ycontainer {
+        width: 100%;
+    }
+
+    .ycontent {
+        width: 90%;
+    }
+}
+
+.ycontainer {
+    font-size: 24px;
+    margin: 0 auto 5px auto;
+    padding: 10px 0 10px 0;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.ycontent {
+    margin: 0 auto;
+}
+
+.yheader {
+    letter-spacing: .25em;
+    margin: 20px 0 0 0;
+}
+
+.ycreater {
+    padding: 0 5px;
+    text-align: center;
+    margin: auto;
+    border-bottom: 4px solid #006650;
+    color: #006650;
+    height: 40px;
+}
+
+.ymessage {
+    text-align: center;
+    margin: auto;
+    color: #666;
+    line-height: 40px;
+}
+
+.yright-img {
+    width: 50%;
+    float: right;
+}
+
+.yaction {
+    opacity: 0;
+}
+
+.ycontainer p {
+    text-indent: 2em;
+}
+
+.ycontent-img {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.ycontent-alt {
+    margin-left: 10%;
+    color: #aaa;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.yul {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.ytitle {
+    font-size: 16px;
+    color: black;
+}
+
+.ytitle span {
+    color: #999
+}
+
+.ylabel-title,
+.ylabel-content {
+    font-size: 14px;
+}
+
+.ysearch {
+    width: 100%;
+}
+
+#yinput {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline-style: none;
+    font-weight: 545;
+    font-size: 14px;
+    display: inline;
+}
+
+#yinput::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+#yinput:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, .6);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+#ysearch {
+    width: 16%;
+    color: white;
+    padding: 13px;
+    background: rgba(0, 117, 62, 0.9);
+    border: 0;
+    text-align: center;
+}
+
+#ysearch:hover {
+    background: rgba(0, 117, 62, 0.5);
+}
+
+#ysearch:focus {
+    outline: 0;
+}
+
+.ytable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ytable thead tr {
+    background-color: #f2f2f2;
+}
+
+.ytable td,
+.ytable th {
+    padding: 9px 15px;
+    min-height: 20px;
+    line-height: 20px;
+    border: 1px solid#e2e2e2;
+    font-size: 14px;
+}
+
+.ynone {
+    display: none;
+}

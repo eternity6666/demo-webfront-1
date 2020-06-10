@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绿城中国</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/container.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/top.css">
+    <script src="../js/animate.js"></script>
+</head>
+
+<body>
+    <div class="ynavbar">
+        <div id="ynavbar-l">
+            <a href="../index.html">
+                <img src="../img/ldzg.jpg" alt="" />
+            </a>
+        </div>
+        <ul id="ynavbar-r">
+            <li><a id="button1" href="./id1.html">创始人致辞</a></li>
+            <li><a id="button2" href="./id2.html">企业概况</a></li>
+            <li><a id="button3" href="./id3.html">企业文化</a></li>
+            <li><a id="button4" href="./id4.html">绿城项目</a></li>
+            <li><a id="button5" href="./id5.html">绿城荣誉</a></li>
+        </ul>
+    </div>
+    <div class="ymargin-top"></div>
+    <div class="ycontainer">
+        <div class="ycontent">
+            <div class="yheader">
+                <div class="ycreater" style="width: 6em;">绿城项目</div>
+                <div class="ymessage" style="width: 12em;">PROJECTS</div>
+            </div>
+
+            <div class="yaction action ysearch">
+                <input type="text" id="yinput" placeholder="请输入案名或管控单位名"><button type="button" onclick="ysearchMethod()"
+                    id="ysearch">搜
+                    索</button>
+            </div>
+            <div class="ydata">
+                <p id="ytable-msg1">以下列表截止至2020年5月31日，并将定期更新</p>
+                <table class="ytable" id="ytable1">
+                    <colgroup>
+                        <col width="180">
+                        <col>
+                        <col width="100">
+                        <col width="90">
+                        <col width="90">
+                    </colgroup>
+                    <thead>
+                        <tr class="yaction action">
+                            <td>管控单位</td>
+                            <td>项目案名</td>
+                            <td>项目性质</td>
+                            <td>省份</td>
+                            <td>城市</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <p id="ytable-msg2">抱歉，没有搜到您要找的内容。</p>
+            </div>
+        </div>
+    </div>
+    <div class="yfooter">
+        <ul class="yhidden-xs">
+            <li><a href="#">绿城微信</a></li>
+            <li><a href="#">绿城微博</a></li>
+            <li><a href="#">网站地图</a></li>
+            <li><a href="#">法律声明</a></li>
+            <li><a href="#">客户留言</a></li>
+        </ul>
+        <div class="yhidden-xs">
+            <p>©<span></span>绿城中国控股有限公司<span></span>浙ICP备05064294号-1<span></span>浙公网安备33010602004015号</p>
+            <p>全国客服热线：95059</p>
+            <p>友情链接：
+                <a href="#">绿城管理</a><span></span>
+                <a href="#">绿城建筑科技</a><span></span>
+                <a href="#">绿城海外EN</a><span></span>
+                <a href="#">蓝城集团</a><span></span>
+                <a href="#">绿城服务</a><span></span>
+                <a href="#">绿城设计GAD</a><span></span>
+                <a href="#">大象设计GOA</a><span></span>
+                <a href="#">绿城装饰</a>
+            </p>
+            <p>
+                <a href="#">绿城医院</a><span></span>
+                <a href="#">中国交建</a><span></span>
+                <a href="#">九龙仓</a><span></span>
+                <a href="#">葛洲坝集团</a><span></span>
+                <a href="#">中国平安</a><span></span>
+                <a href="#">浙报集团</a><span></span>
+                <a href="#">杭州地铁</a><span></span>
+                <a href="#">海尔集团</a>
+            </p>
+        </div>
+        <p class="yhidden-lg">©2016 绿城中国控股有限公司</p>
+    </div>
+</body>
+<script src="../js/data.js"></script>
+<script>
+    animateCSS('action');
+
+    function create(tagName) {
+        return document.createElement(tagName);
+    }
+
+    function createTd(answer) {
+        var td = create('td');
+        td.innerText = answer;
+        return td;
+    }
+
+    function createTr(data) {
+        var tr = create('tr');
+        tr.className = "yaction action";
+        var td = createTd(data.gkdw);
+        tr.appendChild(td);
+        td = createTd(data.xmm);
+        tr.appendChild(td);
+        td = createTd(data.xmxz);
+        tr.appendChild(td);
+        td = createTd(data.sf);
+        tr.appendChild(td);
+        td = createTd(data.cs);
+        tr.appendChild(td);
+        return tr;
+    }
+
+    function createTable(datas) {
+        var ytable1 = document.getElementById('ytable1');
+        var ytableMsg1 = document.getElementById('ytable-msg1');
+        var ytableMsg2 = document.getElementById('ytable-msg2');
+        var tbody = document.getElementsByTagName('tbody')[0];
+        tbody.innerText = "";
+        var dataLen = datas.length;
+        if (dataLen == 0) {
+            ytable1.style = "display:none";
+            ytableMsg1.style = "display:none";
+            ytableMsg2.style = "text-indent:0em";
+            ytableMsg2.className = "yaction action";
+            animateCSS('action', 2000);
+        } else {
+            ytable1.style = "";
+            ytableMsg1.style = "text-indent:0em";
+            ytableMsg1.className = "yaction action";
+            ytableMsg2.style = "display:none";
+            animateCSS('action', 2000);
+            for (i = 0; i < dataLen; ++i) {
+                // console.log(jsonDatas[i].xmm);
+                tbody.appendChild(createTr(datas[i]));
+            }
+        }
+    }
+
+    function ysearchMethod() {
+        var nodeInput = document.getElementById('yinput');
+        var inputValue = nodeInput.value;
+        if (inputValue == '') {
+            createTable(jsonDatas);
+        } else {
+            var arr = [];
+            var dataLen = jsonDatas.length;
+            for (i = 0; i < dataLen; ++i) {
+                var tmp = jsonDatas[i];
+                var flag = tmp.gkdw.search(inputValue)
+                if (flag != -1) {
+                    arr.push(tmp);
+                    continue;
+                }
+                flag = tmp.xmm.search(inputValue);
+                if (flag != -1) {
+                    arr.push(tmp);
+                    continue;
+                }
+                flag = tmp.xmxz.search(inputValue);
+                if (flag != -1) {
+                    arr.push(tmp);
+                    continue;
+                }
+                flag = tmp.sf.search(inputValue);
+                if (flag != -1) {
+                    arr.push(tmp);
+                    continue;
+                }
+                flag = tmp.cs.search(inputValue);
+                if (flag != -1) {
+                    arr.push(tmp);
+                    continue;
+                }
+            }
+            console.log(arr);
+            createTable(arr);
+        }
+        animateCSS('action', 100);
+    }
+    ysearchMethod();
+</script>
+
+</html>
